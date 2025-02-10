@@ -100,8 +100,8 @@ def register_movie_routes(app):
 ```
 21. Run the app and type into URL (after forward-slash): `movies` and click Enter.
 22. Notice `detail: not found` text... We didn't register the endpoints to the API!
-23. Add to main.py imports: `import movies`
-24. Add to end of main.py: `movies.register_movie_routes(app)`
+23. Add to `main.py` imports: `import movies`
+24. Add to end of `main.py`: `movies.register_movie_routes(app)`
 25. Run the app and try entering `/movies` endpoint, you should see all movies.
 26. Explain what happened and why we can view the database of movies; go through all relevant files line by line.
 # Add movie-search endpoint
