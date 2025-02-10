@@ -126,9 +126,18 @@ def register_movie_routes(app):
         return query.all()
 ```
 29. Test the new endpoint.
-
+30. At this point, the directory should look like this:
+```
+project/ 
+├── database.py
+├── main.py 
+├── models.py
+├── movies.db 
+├── movies.py
+└── populate.sql
+``` 
 # Making a front-end
 
-30. Create `static` folder
-31. Inside `static`, create `index.html`, `script.js`, `styles.css`
-32. Probably won't get this far in the second lesson...
+31. Create `static` folder
+32. Inside `static`, create `index.html`, `script.js`, `styles.css`
+33. Probably won't get this far in the second lesson...
