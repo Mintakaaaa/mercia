@@ -1,4 +1,4 @@
-# Recap of Lesson One
+# Recap of APIs
 ## What is an API?
 An API (Application Programming Interface) is like a middleman that lets different software apps or websites communicate with each other. Instead of manually handling tasks, an API allows programs to send requests and receive responses instantly.
 
@@ -20,7 +20,7 @@ You can even start using Stripe's API with Python!
 1. APIs are used everywhere: payment systems, weather apps, authentication (login, register, etc)..
 2. We will be making an API that will allow users to view a movie database and search for movies.
 
-# Basic Set-up
+# Basic API Set-up
 1. If you haven't already done so, create a new Python application on Replit.
 2. Go to `System Dependencies` (imports tab); add `fastapi 0.115.6`, `sqlalchemy 2.0.36`, `uvicorn
 0.32`.
