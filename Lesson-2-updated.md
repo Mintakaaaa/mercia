@@ -75,6 +75,8 @@ this case we want the function to be run when we access the root page of our app
 get information from our application we use a HTTP GET request, which is why the word get appears in the
 decorator.
 
+This is our first **API endpoint**. An API endpoint is a URL that represents a resource or action in our API. An example of this is the "home page" of our api that displays a greeting.
+
 ```python
 def read_root():
     return {"greeting": "Edit me!"}
@@ -149,7 +151,33 @@ INSERT INTO movies (title, genre, director, year) VALUES
 ('The Dark Knight', 'Action', 'Christopher Nolan', 2008),
 ('Pulp Fiction', 'Crime', 'Quentin Tarantino', 1994);
 ```
-The above code creates a new table called "movies" with specific columns and inserts into that table some movie records (rows).
+Some of this code should look familiar from your lessons on SQL!
+
+```sql
+CREATE TABLE movies (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+title TEXT NOT NULL,
+genre TEXT NOT NULL,
+director TEXT NOT NULL,
+year INTEGER NOT NULL
+);
+```
+This section creates a new table called `movies` with fields for `id`, `title`, `genre`, `director`, and `year`. Each field is specified
+to have a datatype of either `INTEGER` or `TEXT`, they are also set to be `NOT NULL`, which means that they can't
+be left blank. `id` is set as the `PRIMARY KEY`, meaning that it is a *unique* value. `id` is also given the property
+`AUTOINCREMENT`, meaning that each new record in the table will be automatically assigned the next available
+value as its `id`.
+
+```sql
+INSERT INTO movies (title, genre, director, year) VALUES
+('Inception', 'Sci-Fi', 'Christopher Nolan', 2010 ),
+('The Avengers', 'Action', 'Joss Whedon', 2012 ),
+('Mean Girls', 'Comedy', 'Mark Waters', 2004 ),
+('The Dark Knight', 'Action', 'Christopher Nolan', 2008 ),
+('Pulp Fiction', 'Crime', 'Quentin Tarantino', 1994 );
+```
+This section simply inserts some movies into the table. Notice that we don't need to specify a value for `id`.
+
 
 14. In the Shell, run `sqlite3 movies.db < populate.sql`.
 
@@ -157,10 +185,253 @@ The above code creates a new table called "movies" with specific columns and ins
 	1. `sqlite3 movies.db`: This part opens the database file named `movies.db` using the `sqlite3` module. If the file doesn't exist, SQLite will create it.
 	2. `< populate.sql`: The `<` operator redirects the content of the file `populate.sql` as input into the `sqlite3` program. Essentially, SQLite will run all the SQL commands in that file.
 
-15. Check if  `movies.db`  exists and is populated.
+15. We should check if  `movies.db`  exists and is populated.
 
- 	What to look for:
-	1. A bunch of unreadable text.
- 	2. A tiny portion of the file should be readable text.
+	We can do this in two ways.
+	1. By double-clicking the `movies.db` file and looking for a bunch of unreadable text where a tiny portion of that text is readable.
+	2. By carrying out the following commands in the Shell:
+		1. `sqlite3 movies.db`
+		2. `SELECT * FROM movies;`
+		3. When finished: `.quit`
 
 Why is most of the `movies.db` file unreadable? This is because SQLite databases store information in a *binary* format, which doesn't translate well to human-readable characters.
+
+# Linking the Database File to the API
+
+16. Using the `touch` command, create a new `database.py` file.
+
+```python
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+
+DATABASE_URL = "sqlite:///./movies.db"
+
+engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+Base = declarative_base()
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+```
+It is not necessary for us to understand every line of this code, but we can get some basic ideas.
+
+```python
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+```
+This section of the code imports the necessary tools from `sqlalchemy`.
+
+```python
+DATABASE_URL = "sqlite:///./movies.db"
+```
+This line specifies the location of the database. `./movies.db` specifies that the database file is in the same
+folder as this `database.py` file.
+
+```python
+engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+```
+This creates the engine, which is the *starting point* for any `sqlalchemy` application. We provide the engine
+with the location of our database and set the `check_same_thread` parameter to `False`, allowing separate
+threads to access the database simultaneously.
+
+```python
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+```
+This line of code creates a session. A session keeps track of any changes that we wish to make to the
+database, but it doesn't make them permanent until we `.commit()` the session. The parameters
+`autocommit=False` and `autoflush=False` make sure that we are deciding when to make permanent
+changes to the database. This is best-practice and a common configuration. `bind=engine` simply connects the session to the engine we previously created.
+
+```python
+Base = declarative_base()
+```
+This line of code will allow us to define SQL tables as python classes. `Base` will be the class that our models will
+inherit from. Models are things that represent objects in our system, like a user, or a movie.
+
+```python
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+```
+This function returns (yields) a database session and ensures it is closed properly when we are finished using
+it. This is very important because this allows us to have a single, central method of creating a database session between different API endpoints. It also protects us from fatal errors as the `finally` block closes the connection to the database before returning an error to us.
+
+## Let's now make our first Model
+17. Using the `touch` command, create a new file `models.py` and add the following code:
+
+```python
+from sqlalchemy import Column, Integer, String
+from database import Base
+
+class Movie(Base):
+    __tablename__ = "movies"
+    id = Column(Integer, primary_key=True)
+    title = Column(String)
+    genre = Column(String)
+    director = Column(String)
+    year = Column(Integer)
+```
+
+This file creates our **movie model** that matches the format of the movies table in our database. It is necessary that we make a model class that is understood by Python because we need to extract movie object out of the database records so that we can work with it. We could just completely ignore the concept of models and forget about sqlalchemy but that would open us up to a lot of errors and inefficient work!
+
+```python
+from sqlalchemy import Column, Integer, String
+```
+This line imports the correct datatypes for our class to use. Each field in our database table is modelled as a
+`Column`, with a datatype of either `Integer` or `String` (which corresponds to `TEXT` in our SQL query).
+
+```python
+from database import Base
+```
+Here we import the `Base` class that we created in the previous file.
+
+```python
+class Movie(Base):
+    __tablename__ = "movies"
+    id = Column(Integer, primary_key=True)
+    title = Column(String)
+    genre = Column(String)
+    director = Column(String)
+    year = Column(Integer)
+```
+We then define our movie model class to match the structure of a movie record in the movies table in our database. Notice that the
+`Movie` class inherits from `Base` to ensure that the class we've created is correctly formatted for use with
+sqlalchemy.
+
+18. Using the `touch` command, create a new python file `movies.py` and add the code:
+
+```python
+from fastapi import Depends
+from sqlalchemy.orm import Session
+from models import Movie
+from database import get_db
+
+def register_movie_routes(app):
+    @app.get("/movies")
+    def read_movies(db: Session = Depends(get_db)):
+        return db.query(Movie).all()
+```
+This file adds a new route (API endpoint) to our application that allows us to view all the movies in our database.
+
+```python
+from fastapi import Depends
+from sqlalchemy.orm import Session
+from models import Movie
+from database import get_db
+```
+
+This section imports all the code required for this file. Notice that we have imported the `Movie` class and
+`get_db` function that we have defined previously.
+
+```python
+def register_movie_routes(app):
+```
+Rather than directly writing the new route into main.py as we did previously, we instead define an outer
+function `def register_movie_routes(app):` whose only job is to define new routes (API endpoints) all in one go. There are several
+reasons for creating new routes in this way, but a simple reason is that it stops main.py becoming cluttered
+with the many different routes that a large application may have.
+
+```python
+@app.get("/movies")
+```
+This line is the decorator that links a particular url to following function. Students: which HTTP method does this decorator represent?
+
+```python
+def read_movies(db: Session = Depends(get_db)):
+```
+In the definition of the `read_movies` function we pass the parameter db, this is of type `Session` and by default is set by the
+value yielded from running the `get_db` function that we defined previously. This is an **important** concept called "dependency injection" - by using such a parameter, we automatically provide a database session to our API endpoint.
+
+```python
+return db.query(Movie).all()
+```
+The body of the function runs a query on the movies table inside our database. As we have not provided any
+restrictions, the query will return all the movies in the database. The `.all()` command says that we want to
+return everything that was found by the query, instead of just the first result. Think of this as the SQL command: `SELECT * FROM movies`.
+
+19. Run the app and type into the URL (after forward-slash): `movies` and click Enter.
+20. Notice `detail: not found` text... We didn't *register* the endpoints to the API!
+21. Add to top of main.py: `import movies`
+22. Add to end of main.py: `movies.register_movie_routes(app)`
+23. Run the app and try entering the `/movies` endpoint, you should see the list of all movies.
+
+# Adding the movie-search Endpoint
+
+24. Add to `movies.py` the code: `from typing import Optional`
+
+Remember that python is a dynamically typed language, meaning that we don't need to specify datatypes for variables and parameters.
+However, it can sometimes be useful to give "hints" to what datatypes we are expecting in our code.
+The `typing` module allows us to add these "hints" and specifically `Optional` allows us to specify that a
+parameter is either of a particular type or can be `None`.
+
+25. Add to `movies.py` the endpoint code:
+
+```python
+@app.get("/movies/search")
+def search_movies(
+    genre: Optional[str] = None,
+    director: Optional[str] = None,
+    year: Optional[int] = None,
+    db: Session = Depends(get_db),
+):
+    query = db.query(Movie)
+    if genre:
+        query = query.filter(Movie.genre == genre)
+    if director:
+        query = query.filter(Movie.director == director)
+    if year:
+         query = query.filter(Movie.year == year)
+     return query.all()
+```
+As the name suggests, this API endpoint allows us to search for movies in our database using specific column names.
+
+```python
+@app.get("/movies/search")
+def search_movies(
+genre: Optional[str] = None,
+director: Optional[str] = None,
+year: Optional[int] = None,
+db: Session = Depends(get_db),
+):
+```
+This section of the code defines a new API endpoint, but (other than `db: Session = Depends(get_db)` which we've already discussed) this is the first time we've seen a function defining an endpoint taking parameters. `genre`, `director`, and `year` are all parameters that can be set. `Optional[str] = None` allows us to exclude a parameter from our function call (which would mean this parameter would be of type `None`).
+
+
+While we will later use a HTML form to choose values for these parameters, we can do so for now through the
+URL. Typing in the URL `/movies/search?year=2008` returns only those films in the database from the year 2008. 
+
+Typing in `/movies/search?genre=Action&director=Joss%20Whedon` filters the movies down to those with genre set to Action and director set to Joss Whedon.
+
+```python
+query = db.query(Movie)
+if genre:
+    query = query.filter(Movie.genre == genre)
+if director:
+    query = query.filter(Movie.director == director)
+if year:
+    query = query.filter(Movie.year == year)
+return query.all()
+```
+
+As we saw previously `query = db.query(Movie)` runs a query on our database, returning all the movies stored in the movies table. We then want to run a series of **filters** on this query, for example `query = query.filter(Movie.genre == genre)` filters the list of movies down to only those with `genre` field equal to the `genre` parameter. If you are confused by `if genre`, remember that `None` is a *falsy* value, meaning that if a value is not given to the `genre` parameter, then we **do not** filter by it.
+
+At this point, the directory should look like this:
+
+```
+project/
+├── database.py
+├── main.py
+├── models.py
+├── movies.db
+├── movies.py
+└── populate.sql
+```
