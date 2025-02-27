@@ -115,6 +115,6 @@ refreshing the webview, your new message will *not* appear. This is because `uvi
 version of our app.
 9. Make sure the Shell tab is open and stop, using `Ctrl + C`, the app before re-running it with `uvicorn
 main:app`.
-10. Programmers LOVE automation... Instead of using `Ctrl + C` and `uvicorn main:app` to see changes to our API (which takes a few steps). Let's just make a tiny change to the function of the "Run" button...
+10. Programmers LOVE automation... Instead of using `Ctrl + C` and `uvicorn main:app` to see changes to our API (which takes a few steps), let's just make a tiny change to the function of the "Run" button...
 	1. Search for the `.replit` file and add: `run = uvicorn main:app --host=0.0.0.0 --port=${PORT:-8000}`
  	2. This will allow the "Run" button to tell `uvicorn` to serve our API to us.
