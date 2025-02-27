@@ -121,9 +121,10 @@ main:app`.
 
 # Creating a populated database file
 
-11. Let's now make a database to store all of our movies.
-12. Enter the Shell.
-13. Run `touch populate.sql`.
+Let's now make a database to store all of our movies.
+
+11. Enter the Shell.
+12. Run `touch populate.sql`.
 
 Notice a new file in your root directory? What you just did was create a new file of the format `.sql`.
 
@@ -131,7 +132,7 @@ The `touch` command is one of many Command Line Interface (CLI) commands that we
 
 This command simply creates a new, empty file. The syntax is: `touch <file_name_with_extension>`
 
-14. Let's add this SQL to the `populate.sql` script.
+13. Let's add this SQL to the `populate.sql` script.
 ```sql
 CREATE TABLE movies (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -150,13 +151,13 @@ INSERT INTO movies (title, genre, director, year) VALUES
 ```
 The above code creates a new table called "movies" with specific columns and inserts into that table some movie records (rows).
 
-15. In the Shell, run `sqlite3 movies.db < populate.sql`.
+14. In the Shell, run `sqlite3 movies.db < populate.sql`.
 
 	This command looks a little intimidating, so let's break it down:
 	1. `sqlite3 movies.db`: This part opens the database file named `movies.db` using the `sqlite3` module. If the file doesn't exist, SQLite will create it.
 	2. `< populate.sql`: The `<` operator redirects the content of the file `populate.sql` as input into the `sqlite3` program. Essentially, SQLite will run all the SQL commands in that file.
 
-16. Check if  `movies.db`  exists and is populated.
+15. Check if  `movies.db`  exists and is populated.
 
  	What to look for:
 	1. A bunch of unreadable text.
