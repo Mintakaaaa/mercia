@@ -40,7 +40,7 @@ needed.
 projects or testing because it doesn’t need a separate server to run. We will learn more details about
 each of these modules during development.
 
-4. Add to `main.py`:
+5. Add to `main.py`:
 ```python
 from fastapi import FastAPI
 
@@ -118,3 +118,48 @@ main:app`.
 10. Programmers LOVE automation... Instead of using `Ctrl + C` and `uvicorn main:app` to see changes to our API (which takes a few steps), let's just make a tiny change to the function of the "Run" button...
 	1. Search for the `.replit` file and add: `run = uvicorn main:app --host=0.0.0.0 --port=${PORT:-8000}`
  	2. This will allow the "Run" button to tell `uvicorn` to serve our API to us.
+
+# Creating a populated database file
+
+11. Let's now make a database to store all of our movies.
+12. Enter the Shell.
+13. Run `touch populate.sql`.
+
+Notice a new file in your root directory? What you just did was create a new file of the format `.sql`.
+
+The `touch` command is one of many Command Line Interface (CLI) commands that we often use whilst programming.
+
+This command simply creates a new, empty file. The syntax is: `touch <file_name_with_extension>`
+
+14. Let's add this SQL to the `populate.sql` script.
+```sql
+CREATE TABLE movies (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  genre TEXT NOT NULL,
+  director TEXT NOT NULL,
+  year INTEGER NOT NULL
+);
+
+INSERT INTO movies (title, genre, director, year) VALUES
+('Inception', 'Sci-Fi', 'Christopher Nolan', 2010),
+('The Avengers', 'Action', 'Joss Whedon', 2012),
+('Mean Girls', 'Comedy', 'Mark Waters', 2004),
+('The Dark Knight', 'Action', 'Christopher Nolan', 2008),
+('Pulp Fiction', 'Crime', 'Quentin Tarantino', 1994);
+```
+The above code creates a new table called "movies" with specific columns and inserts into that table some movie records (rows).
+
+15. In the Shell, run `sqlite3 movies.db < populate.sql`.
+
+	This command looks a little intimidating, so let's break it down:
+	1. `sqlite3 movies.db`: This part opens the database file named `movies.db` using the `sqlite3` module. If the file doesn't exist, SQLite will create it.
+	2. `< populate.sql`: The `<` operator redirects the content of the file `populate.sql` as input into the `sqlite3` program. Essentially, SQLite will run all the SQL commands in that file.
+
+16. Check if  `movies.db`  exists and is populated.
+
+ 	What to look for:
+	1. A bunch of unreadable text.
+ 	2. A tiny portion of the file should be readable text.
+
+Why is most of the `movies.db` file unreadable? This is because SQLite databases store information in a *binary* format, which doesn't translate well to human-readable characters.
