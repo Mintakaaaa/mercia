@@ -4,7 +4,7 @@
 220131959
 
 **Date** 
-01/03/25
+28/02/25
 
 **Action points identified from previous visit**
 - Ask more questions
@@ -13,7 +13,7 @@
 
 **Action points acted on**
 - I asked more questions
-- I prepared a list of things I was going to say.
+- I prepared a list of things I was going to say
 - Recapped last visit's API info and executed the lesson plan
 
 **Tutoring context & session content**

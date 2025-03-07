@@ -1,5 +1,5 @@
-# Observation Visit One & Two
-The information in observation visits one and two is identical and so it was combined into this one file.
+# Observation Visit One, Two & Three
+The information in observation visits One, Two and Three is identical and so it was combined into this one file.
 
 **Student number**
 220131959
