@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "table_of_visits.md",
+                "file": "lesson_plans/lesson_2_sketch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "table_of_visits"
+              "title": "lesson_2_sketch"
             }
           }
         ]
@@ -170,19 +170,19 @@
   },
   "active": "d20606e7f41e7c91",
   "lastOpenFiles": [
+    "learning_criteria.md",
     "observation_log_1_2_3.md",
+    "README.md",
+    "table_of_visits.md",
+    "weekly_log_template.md",
+    "lesson_plans/README.md",
     "lesson_plans/lesson_2_sketch.md",
+    "lesson_plans/Lesson_2_actual.md",
     "weekly_logs/log_4.md",
     "weekly_logs/log_3.md",
     "weekly_logs/README.md",
-    "weekly_log_template.md",
     "weekly_logs/log_1.md",
-    "table_of_visits.md",
-    "lesson_plans/Lesson_2_actual.md",
-    "lesson_plans/README.md",
     "weekly_logs/log_2.md",
-    "weekly_log_template 1.md",
-    "learning_criteria.md",
-    "README.md"
+    "weekly_log_template 1.md"
   ]
 }
