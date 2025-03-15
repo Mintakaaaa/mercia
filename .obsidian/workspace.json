@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "table_of_visits.md",
+                "file": "weekly_logs/log_3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for table_of_visits"
+              "title": "Backlinks for log_3"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "table_of_visits.md",
+                "file": "weekly_logs/log_3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from table_of_visits"
+              "title": "Outgoing links from log_3"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "table_of_visits.md",
+                "file": "weekly_logs/log_3.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of table_of_visits"
+              "title": "Outline of log_3"
             }
           }
         ]
@@ -170,17 +170,19 @@
   },
   "active": "d20606e7f41e7c91",
   "lastOpenFiles": [
+    "observation_log_1_2_3.md",
     "lesson_plans/lesson_2_sketch.md",
+    "weekly_logs/log_4.md",
+    "weekly_logs/log_3.md",
+    "weekly_logs/README.md",
+    "weekly_log_template.md",
+    "weekly_logs/log_1.md",
+    "table_of_visits.md",
     "lesson_plans/Lesson_2_actual.md",
     "lesson_plans/README.md",
-    "weekly_logs/log_3.md",
-    "weekly_log_template.md",
     "weekly_logs/log_2.md",
-    "weekly_logs/log_1.md",
     "weekly_log_template 1.md",
     "learning_criteria.md",
-    "table_of_visits.md",
-    "README.md",
-    "observation_log_1_2_3.md"
+    "README.md"
   ]
 }
