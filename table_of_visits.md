@@ -15,9 +15,9 @@ The below table describes what happened in each visit related to the Special Pro
 | Visit No. | Date     | Time spent | Actions taken                                                                         | Weekly log reference | Lesson plan reference |
 | --------- | -------- | ---------- | ------------------------------------------------------------------------------------- | -------------------- | --------------------- |
 | 1         | 07/02/25 | 1.5 hr     | 1. Mini lecture on the project outline and motivation<br>2. Gathered teacher feedback | log_1                | **NA**                |
-| 2         | 28/02/25 | 1.5 hr     | 1. Project-building Lesson One<br>2. Gathered teacher feedback                        | log_2                | lesson_2_actual       |
-| 3         | 06/03/25 | 1.5 hr     | 1. Project-building Lesson Two<br>2. Gathered teacher feedback                        | log_3                | lesson_2_actual       |
-| 4         | 13/03/25 | 1.5 hr     | 1. Project-building Lesson Three<br>2. Gathered teacher feedback                      | log_4                | lesson_2_actual       |
+| 2         | 28/02/25 | 1.5 hr     | 1. Project-building Lesson One<br>2. Gathered teacher feedback                        | log_2                | lesson_1_actual       |
+| 3         | 06/03/25 | 1.5 hr     | 1. Project-building Lesson Two<br>2. Gathered teacher feedback                        | log_3                | lesson_1_actual       |
+| 4         | 13/03/25 | 1.5 hr     | 1. Project-building Lesson Three<br>2. Gathered teacher feedback                      | log_4                | lesson_1_actual       |
 | 5         | 20/03/25 |            |                                                                                       |                      |                       |
 | 6         | 27/03/25 |            |                                                                                       |                      |                       |
 **Note**: lesson_2_actual was enough material for 3 lessons (Visit No. 2-4)
