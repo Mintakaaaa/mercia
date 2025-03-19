@@ -212,6 +212,7 @@ If the movie isn’t found, we send a **404: Not Found** error. There are a bunc
 | 201              | Created     | The request has been fulfilled, resulting in the creation of a new resource (like a new movie!)                |
 | 400              | Bad Request | The request will not be processed because of some sort of client error, for example: malformed request syntax. |
 | 404              | Not Found   | The requested resource (like a movie) could not be found.                                                      |
+
 *(Completely optional) If you're thinking of making your own API in your free time you will probably encounter new status codes you haven't seen before; so, it would be worthwhile having a look at Wikipedia's article about HTTP Status Codes: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes*
 
 `movie_query.update(`
