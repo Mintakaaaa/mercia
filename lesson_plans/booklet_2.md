@@ -91,6 +91,7 @@ We’ll be working with our **movie database**. First, let’s start **adding mo
 Want to add a new movie? Say no more. We’ll create a `POST` request for that because `POST` requests, unlike `GET` requests, have the special ability to add data into a database.
 
 **Movie creation endpoint**
+
 Add into `movies.py` under the `movies/search` endpoint the below code
 ```python
 @app.post("/movies")
@@ -245,6 +246,7 @@ You should see a new `PUT` endpoint. Enter some new movie details...
 Time to erase a movie from existence. `DELETE` lets us do just that.
 
 **Movie deletion endpoint**
+
 Add into `movies.py` under the new `PUT` endpoint the below code
 ```python
 @app.delete("/movies/{movie_id}") 
@@ -284,6 +286,7 @@ Let's test it using FastAPI docs! Delete the movie with ID = 1
 Another Update method? This one is slightly more complex! `PATCH` allows us to update a movie record without having to type out unnecessary columns.
 
 **Partial movie update endpoint**
+
 Add into `movies.py` under the new `DELETE` endpoint the below code
 ```python
   @app.patch("/movies/{movie_id}")
