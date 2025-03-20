@@ -1,3 +1,4 @@
+***MADE INDEPENDENTLY BY MINDAUGAS BRAZLAUSKAS***
 # Recap of first three lessons
 
 **Lesson 1: FastAPI Setup**
@@ -221,6 +222,19 @@ If the movie isn’t found, we send a **404: Not Found** error. There are a bunc
 
 This updates every record that matches the movie query we specified earlier, with the new movie details.
 
+---
+
+***IN PRACTICE: LESSON 4 ENDED HERE***
+
+Recap questions to ask in Lesson 5:
+1. Which 3 HTTP methods did we implement?
+2. What does CRUD stand for?
+3. Which HTTP methods relate to which letters of CRUD?
+4. Why did we write a HTTP exception?
+5. What does `.filter()` do?
+6. What does `.first()` do?
+
+---
 Let's test this new endpoint! We need to re-enter the `FastAPI docs`.
 You should see a new `PUT` endpoint. Enter some new movie details...
 

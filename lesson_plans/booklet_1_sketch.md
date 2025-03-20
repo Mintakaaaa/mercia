@@ -1,3 +1,4 @@
+***SKETCH MADE INDEPENDENTLY BY MINDAUGAS BRAZLAUSKAS***
 # Recap of Lesson One
 1. What is an API and why should we use them? Below will answer this.
 2. Stripe's services provide easy handling of payment transactions.

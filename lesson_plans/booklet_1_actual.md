@@ -1,3 +1,4 @@
+***MADE IN COLLABORATION WITH MINDAUGAS BRAZLAUSKAS & MR JENNINGS***
 # Recap of APIs
 ## What is an API?
 An API (Application Programming Interface) is like a middleman that lets different software apps or websites communicate with each other. Instead of manually handling tasks, an API allows programs to send requests and receive responses instantly.
@@ -121,6 +122,17 @@ main:app`.
 	1. Search for the `.replit` file and add: `run = uvicorn main:app --host=0.0.0.0 --port=${PORT:-8000}`
  	2. This will allow the "Run" button to tell `uvicorn` to serve our API to us.
 
+---
+
+***IN PRACTICE: LESSON 1 ENDED HERE***
+
+Recap questions to ask in Lesson 2:
+1. Which tool did we use the make the API instance?
+2. Which tool did we use to serve the API?
+3. Which HTTP method is used to read the root of the API?
+4. What do the commands `ls`, `cd`, `cd ..`, `cd workspace` do?
+
+---
 # Creating a populated database file
 
 Let's now make a database to store all of our movies.
@@ -265,6 +277,21 @@ def get_db():
 This function returns (yields) a database session and ensures it is closed properly when we are finished using
 it. This is very important because this allows us to have a single, central method of creating a database session between different API endpoints. It also protects us from fatal errors as the `finally` block closes the connection to the database before returning an error to us.
 
+---
+
+***IN PRACTICE: LESSON 2 ENDED HERE***
+
+Recap questions to ask in Lesson 3:
+1. Which CLI command creates a new file?
+2. What database did we create?
+	1. How many tables did this database have?
+	2. What columns did the database table have?
+3. Which CLI command did we use to populate the movies database?
+4. Which new tool did we introduce into the project?
+5. Which column's data do we **not** enter when making a new record? Why?
+6. Why did we make the `get_db()` function, and what is its significance?
+
+---
 ## Let's now make our first Model
 17. Using the `touch` command, create a new file `models.py` and add the following code:
 
@@ -435,3 +462,12 @@ project/
 ├── movies.py
 └── populate.sql
 ```
+
+---
+
+***IN PRACTICE: LESSON 3 ENDED HERE***
+
+
+Recap questions to ask in Lesson 4 are in Booklet 2 and include questions about all previous lessons (lessons 1-3).
+
+---
