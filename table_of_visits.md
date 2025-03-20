@@ -20,4 +20,5 @@ The below table describes what happened in each visit related to the Special Pro
 | 4         | 13/03/25 | 1.5 hr     | 1. Project-building Lesson Three<br>2. Gathered teacher feedback                                                           | [Weekly Log 4](weekly_logs/log_4.md) | [Booklet 1](lesson_plans/booklet_1_actual.md) |
 | 5         | 20/03/25 | 1.5 hr     | 1. Created [Booklet 2](lesson_plans/booklet_2.md)<br>2. Project-building Lesson<br>3. Gathered teacher feedback            | [Weekly Log 5](weekly_logs/log_5.md) | [Booklet 2](lesson_plans/booklet_2.md)        |
 | 6         | 27/03/25 |            |                                                                                                                            |                                      |                                               |
+
 **Note**: Booklet 1 was enough material for 3 lessons (Visit No. 2-4)
