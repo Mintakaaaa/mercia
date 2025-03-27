@@ -18,7 +18,10 @@ The below table describes what happened in each visit related to the Special Pro
 | 2         | 28/02/25 | 1.5 hr     | 1. Created [Booklet 1](lesson_plans/booklet_1_actual.md)<br>2. Project-building Lesson One<br>3. Gathered teacher feedback | [Weekly Log 2](weekly_logs/log_2.md) | [Booklet 1](lesson_plans/booklet_1_actual.md) |
 | 3         | 06/03/25 | 1.5 hr     | 1. Project-building Lesson Two<br>2. Gathered teacher feedback                                                             | [Weekly Log 3](weekly_logs/log_3.md) | [Booklet 1](lesson_plans/booklet_1_actual.md) |
 | 4         | 13/03/25 | 1.5 hr     | 1. Project-building Lesson Three<br>2. Gathered teacher feedback                                                           | [Weekly Log 4](weekly_logs/log_4.md) | [Booklet 1](lesson_plans/booklet_1_actual.md) |
-| 5         | 20/03/25 | 1.5 hr     | 1. Created [Booklet 2](lesson_plans/booklet_2.md)<br>2. Project-building Lesson<br>3. Gathered teacher feedback            | [Weekly Log 5](weekly_logs/log_5.md) | [Booklet 2](lesson_plans/booklet_2.md)        |
-| 6         | 27/03/25 |            |                                                                                                                            |                                      |                                               |
+| 5         | 20/03/25 | 1.5 hr     | 1. Created [Booklet 2](lesson_plans/booklet_2.md)<br>2. Project-building Lesson Four<br>3. Gathered teacher feedback       | [Weekly Log 5](weekly_logs/log_5.md) | [Booklet 2](lesson_plans/booklet_2.md)        |
+| 6         | 27/03/25 | 1.5 hr     | 1. Project-building Lesson Five<br>2. Gathered teacher feedback                                                            | [Weekly Log 6](weekly_logs/log_6.md) | [Booklet 2](lesson_plans/booklet_2.md)        |
+| 7         | 17/03/25 |            |                                                                                                                            | Weekly Log 7                         | Booklet 3                                     |
 
 **Note**: Booklet 1 was enough material for 3 lessons (Visit No. 2-4)
+**Note**: Booklet 2 was enough material for 2 lessons (Visit No. 5-6)
+
