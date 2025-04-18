@@ -1,8 +1,11 @@
 # Recap of all lessons
 
 **Lesson 1: FastAPI Setup** (Installed dependencies, made API instance & first endpoint)
+
 **Lesson 2: Database Integration** (Made a populated DB and wrote API-DB configurations)
+
 **Lesson 3: Models and Endpoints** (Made our first Model and more endpoints)
+
 **Lessons 4 & 5: CRUD**
 1. Intro to CRUD and why/where it's used.
 2. Making CRUD endpoints.
@@ -14,6 +17,7 @@
 4. What special thing makes the letter U different from all the others?
 
 Fill in the table below to relate CRUD to FastAPI!
+
 **BOLD is the answer**
 
 | CRUD Operation        | HTTP Method | FastAPI decorator      |
@@ -70,9 +74,12 @@ INSERT INTO movies (title, genre, director, year, **rating**) VALUES
 ('Pulp Fiction', ... , **2.0**);
 ```
 **models.py =>** 
+
 `import ..., Float`
 `rating = Column(Float, index=True)`
+
 **movies.py =>** 
+
 1. Add to `create_movie` param: `rating: Optional[float] = None,
 	1. Add to Movie constructor: `rating = rating` 
 2. Add to `update_movie` param: `rating: float,`
@@ -111,6 +118,7 @@ Tick each one as you go:
 ---
 ### Challenge 2 Answers/Steps
 **movies.py =>** 
+
 1. Add import: `from sqlalchemy import asc, desc`
 2. Add to `search_movies` param: `sort_by: Optional[str] = None,`
 	1. Add to body:
@@ -153,6 +161,7 @@ Tick each one as you go:
 ---
 ### Challenge 3 Answers/Steps
 **movies.py =>** 
+
 1. Add import: `import random`
 2. Make new `get_random_movie` endpoint:
 ```python
@@ -197,6 +206,7 @@ Tick each one as you go:
 ---
 ### Challenge 4 Answers/Steps
 **populate.sql =>** Add watched column and insert into records...
+
 ```sql
 CREATE TABLE movies (
   ...
@@ -209,9 +219,12 @@ INSERT INTO movies (title, genre, director, year, rating, **watched**) VALUES
 ('Pulp Fiction', ... , 2.0, **false**);
 ```
 **models.py =>** 
+
 `import ..., Boolean`
 `watched = Column(Boolean, index=True)`
+
 **movies.py =>** 
+
 1. Add to `create_movie` param: `watched: Optional[bool] = None,
 	1. Add to Movie constructor: `watched = watched` 
 2. Add to `update_movie` param: `watched: bool,`

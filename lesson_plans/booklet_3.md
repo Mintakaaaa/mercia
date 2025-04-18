@@ -1,8 +1,11 @@
 # Recap of all lessons
 
 **Lesson 1: FastAPI Setup** (Installed dependencies, made API instance & first endpoint)
+
 **Lesson 2: Database Integration** (Made a populated DB and wrote API-DB configurations)
+
 **Lesson 3: Models and Endpoints** (Made our first Model and more endpoints)
+
 **Lessons 4 & 5: CRUD**
 1. Intro to CRUD and why/where it's used.
 2. Making CRUD endpoints.
