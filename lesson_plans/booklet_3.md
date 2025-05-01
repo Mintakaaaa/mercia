@@ -1,3 +1,5 @@
+***MADE INDEPENDENTLY BY MINDAUGAS BRAZLAUSKAS***
+***BOOKLET WITH ANSWERS: [Booklet 3 (w/ answers)](lesson_plans/booklet_3_answers.md)***
 # Recap of all lessons
 
 **Lesson 1: FastAPI Setup** (Installed dependencies, made API instance & first endpoint)

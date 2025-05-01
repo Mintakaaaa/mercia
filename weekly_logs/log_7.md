@@ -17,7 +17,7 @@
 - Kept an eye on lesson time throughout
 
 **Tutoring context & session content**
-6 Year 12 students - direct programming lesson
+6 Year 12 students - Special Project coding challenges
 
 **Achievement and Progress**
 

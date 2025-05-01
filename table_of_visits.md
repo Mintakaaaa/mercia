@@ -20,8 +20,11 @@ The below table describes what happened in each visit related to the Special Pro
 | 4         | 13/03/25 | 1.5 hr     | 1. Project-building Lesson Three<br>2. Gathered teacher feedback                                                           | [Weekly Log 4](weekly_logs/log_4.md) | [Booklet 1](lesson_plans/booklet_1_actual.md)                                                         |
 | 5         | 20/03/25 | 1.5 hr     | 1. Created [Booklet 2](lesson_plans/booklet_2.md)<br>2. Project-building Lesson Four<br>3. Gathered teacher feedback       | [Weekly Log 5](weekly_logs/log_5.md) | [Booklet 2](lesson_plans/booklet_2.md)                                                                |
 | 6         | 27/03/25 | 1.5 hr     | 1. Project-building Lesson Five<br>2. Gathered teacher feedback                                                            | [Weekly Log 6](weekly_logs/log_6.md) | [Booklet 2](lesson_plans/booklet_2.md)                                                                |
-| 7         | 17/04/25 | 1.5 hr     | 1. Created Booklet 3<br>2. Coding Challenges Lesson One<br>3. Gathered teacher feedback                                    | [Weekly Log 7](weekly_logs/log_7.md) | [Booklet 3](lesson_plans/booklet_3.md)<br>[Booklet 3 (w/ answers)](lesson_plans/booklet_3_answers.md) |
-| 8         |          |            |                                                                                                                            |                                      |                                                                                                       |
+| 7         | 17/04/25 | 1.5 hr     | 1. Created [Booklet 3](lesson_plans/booklet_3.md)<br>2. Coding Challenges Lesson One<br>3. Gathered teacher feedback       | [Weekly Log 7](weekly_logs/log_7.md) | [Booklet 3](lesson_plans/booklet_3.md)<br>[Booklet 3 (w/ answers)](lesson_plans/booklet_3_answers.md) |
+| 8         | 31/04/25 | 1.5 hr     | 1. Coding Challenges Lesson Two<br>2. Gathered teacher feedback<br>3. Goodbyes... 🥹                                       | [Weekly Log 8](weekly_logs/log_8.md) | [Booklet 3](lesson_plans/booklet_3.md)<br>[Booklet 3 (w/ answers)](lesson_plans/booklet_3_answers.md) |
 
-**Note**: Booklet 1 was enough material for 3 lessons (Visit No. 2-4)
-**Note**: Booklet 2 was enough material for 2 lessons (Visit No. 5-6)
+**Note**: [Booklet 1](lesson_plans/booklet_1_actual.md) was enough material for 3 lessons (Visit No. 2-4)
+
+**Note**: [Booklet 2](lesson_plans/booklet_2.md) was enough material for 2 lessons (Visit No. 5-6)
+
+**Note**: [Booklet 3](lesson_plans/booklet_3.md) was enough material for 2 lessons (Visit No. 7-8)

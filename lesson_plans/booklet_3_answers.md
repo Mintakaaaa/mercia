@@ -1,3 +1,4 @@
+***MADE INDEPENDENTLY BY MINDAUGAS BRAZLAUSKAS***
 # Recap of all lessons
 
 **Lesson 1: FastAPI Setup** (Installed dependencies, made API instance & first endpoint)
