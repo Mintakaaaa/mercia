@@ -31,7 +31,7 @@
 - (Possible improvement from teacher) I should have started the previous coding challenges lesson with the second challenge instead of the first one because it was more appropriate difficulty level-wise.
 
 **Initiative and Creativity**
-- Created a good questionnaire for results gathering for the special project - got the green-light from the teacher to give to students. Will be filled out 1 day hopefully after this visit.
+- (Achievement) Created a good questionnaire for results gathering for the special project - got the green-light from the teacher to give to students. Will be filled out 1 day hopefully after this visit.
 
 **Understanding the Educational Needs of Others**
 - Point 1 of Communication - this takes **lots of understanding** of educational needs of **each** student as everyone is different *(skill level, their current mental image of the coding problem, the discrepancy between their code and the solution and how to bridge that without giving the answer and more...)*
