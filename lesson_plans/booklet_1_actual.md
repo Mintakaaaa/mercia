@@ -331,8 +331,7 @@ class Movie(Base):
     year = Column(Integer)
 ```
 We then define our movie model class to match the structure of a movie record in the movies table in our database. Notice that the
-`Movie` class inherits from `Base` to ensure that the class we've created is correctly formatted for use with
-sqlalchemy.
+`Movie` class inherits from `Base` to ensure that the class we've created is correctly formatted for use with `sqlalchemy`.
 
 18. Using the `touch` command, create a new python file `movies.py` and add the code:
 
