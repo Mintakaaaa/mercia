@@ -48,6 +48,7 @@ A One-hour “lecture” style lesson for Y12 students that introduced the conce
 - Rehearse the lesson plan more to remember to address key points, which I forgot/missed.
 - I keep circling back in different ways when explaining something, this can confuse students.
 
+---
 # Weekly Log 2
 
 **Student Number**
@@ -99,7 +100,7 @@ A One-hour “lecture” style lesson for Y12 students that introduced the conce
 - Give knowledge, then test - I tested before giving knowledge.
 - Ask questions in *negative* - e.g. "Who **hasn't** finished setting this up?" instead of "Who **has** finished setting this up?" - This gives more pressure on students to respond and keeps the lesson going.
 - Ask **MORE** questions! Have a list of 5-10 questions for the second lesson written at specific locations on the plan.
-
+---
 # Weekly Log 3
 
 **Student Number**
@@ -172,8 +173,6 @@ INSERT INTO movies (title, genre, director, year) VALUES
 - When questioning students that are struggling, either tell them the answer or give a hint. 
 - After a student didn't know the answer to my question, check back a few minutes later.
 ---
-
-
 # Weekly Log 4
 
 **Student Number**
@@ -233,7 +232,6 @@ INSERT INTO movies (title, genre, director, year) VALUES
 - When asking for a multi-part answer, ask **each** student for one part of the answer.
 - **Stop forgetting to check the time!!!** This week I barely finished the lesson on time. It's an improvement - but still needs work.
 ---
-
 # Weekly Log 5
 
 **Student Number**
@@ -288,7 +286,6 @@ INSERT INTO movies (title, genre, director, year) VALUES
 - I stopped what I was talking about when I noticed a student with their hand up. Teacher informed me I can finish making my points before answering a student's question.
 - When I question a student and they struggle, I should try to loop back to them after a few minutes to reinforce their learning. I should do this by adding a tick-mark or a cross for questions that were answered correctly or struggled on. 
 ---
-
 # Weekly Log 6
 
 **Student Number**
@@ -392,7 +389,6 @@ if year is not None:
 - When creating coding challenges, provide more hints.
 - Leave enough time in the lesson to go through solutions to attempted coding challenges.
 ---
-
 # Weekly Log 8
 
 **Student Number**
